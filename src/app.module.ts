@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './modules/auth/auth.modules';
 
 import { join } from 'path';
+import { BlogModule } from './modules/blog-post/blog.module';
 // import { join } from 'path';
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { join } from 'path';
       inject: [ConfigService],
     }),
     AuthModule,
+    BlogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
